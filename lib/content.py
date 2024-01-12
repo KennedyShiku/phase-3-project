@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 from .database import Base
 
 class Content(Base):
-    __tablename__ = "contents"
+    __tablename__ = "contents" 
 
     content_id = Column(Integer, primary_key=True, index=True)
     campaign_name = Column(String, index=True)

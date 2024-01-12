@@ -12,7 +12,7 @@ Base.query = db_session.query_property()
 
 def init_db():
     import lib.client
-    import lib.content
+    import lib.content 
     import lib.marketer
 
     Base.metadata.create_all(bind=engine)

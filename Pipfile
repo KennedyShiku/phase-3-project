@@ -5,7 +5,9 @@ name = "pypi"
 
 [packages]
 sqlalchemy = "*"
-alembic = "*"
+alembic = "*" 
+click = "*"
+tabulate = "*"
 
 [dev-packages]
 
