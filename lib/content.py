@@ -12,3 +12,5 @@ class Content(Base):
 
     client = relationship("Client", back_populates="contents")
 
+    def __repr__(self):
+        return f"Content(content_id={self.content_id}, campaign_name={self.campaign_name}, client_id={self.client_id})"

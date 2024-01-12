@@ -51,7 +51,12 @@ def add_client():
     db_session.add(new_content)
     db_session.commit()
 
-    print(f"Client '{name}' added to the database with content '{content_type}' marketed by '{chosen_marketer.name}'.")
+    print(f"{name} added to the database with their content, {content_type}, marketed by {chosen_marketer.name}.")
+
+def query_and_print_client():
+    """Query and print a client."""
+    client = db_session.query(Client).first()
+    print(client)
 
 if __name__ == "__main__":
     initialize_database()

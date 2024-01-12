@@ -10,3 +10,6 @@ class Client(Base):
     name = Column(String, index=True)
 
     contents = relationship("Content", back_populates="client")
+
+    def __repr__(self):
+        return f"Client(client_id={self.client_id}, name={self.name})"
