@@ -1,3 +1,12 @@
-from sqlalchemy import Column, Interger, String
+# lib/client.py
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from lib.database import Base
+from .database import Base
+
+class Client(Base):
+    __tablename__ = "clients"
+
+    client_id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+
+    contents = relationship("Content", back_populates="client")
