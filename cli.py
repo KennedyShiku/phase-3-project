@@ -8,6 +8,11 @@ def initialize_database():
     """Initialize the database."""
     init_db()
 
+    existing_marketers = db_session.query(Marketer).count()
+    if existing_marketers >= 10:
+        print("Database already initialized with initial marketers.")
+        return
+
     initial_marketers = [
         Marketer(name="Kennedy"),
         Marketer(name="Rich"),
@@ -51,7 +56,7 @@ def add_client():
     db_session.add(new_content)
     db_session.commit()
 
-    print(f"{name} added to the database with their content, {content_type}, marketed by {chosen_marketer.name}.")
+    print(f"{name} has been added to the database with their content, {content_type}, marketed by {chosen_marketer.name}.")
 
 def query_and_print_client():
     """Query and print a client."""
