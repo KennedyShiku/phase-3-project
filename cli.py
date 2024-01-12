@@ -1,6 +1,6 @@
 # cli.py
 import click
-from tabulate import tabulate  # Import tabulate for nice table formatting
+from tabulate import tabulate  
 from lib.database import init_db, db_session
 from lib.client import Client
 from lib.content import Content
